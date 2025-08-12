@@ -92,33 +92,15 @@ const HabitTrackerLanding: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-900 text-white overflow-hidden">
+    <div className="min-h-screen bg-black text-white overflow-hidden pt-10">
       {/* Animated Background */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
         <div className="absolute bottom-20 left-40 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"></div>
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 flex justify-between items-center p-6 md:p-8">
-        <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">
-            <Trophy className="w-6 h-6 text-white" />
-          </div>
-          <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            HabitQuest
-          </span>
-        </div>
-        <div className="hidden md:flex space-x-8">
-          <a href="#features" className="hover:text-cyan-400 transition-colors">Features</a>
-          <a href="#how-it-works" className="hover:text-cyan-400 transition-colors">How it Works</a>
-          <a href="#community" className="hover:text-cyan-400 transition-colors">Community</a>
-        </div>
-        <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105">
-          Get Started
-        </button>
-      </nav>
 
       {/* Hero Section */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 pt-12 md:pt-20">
