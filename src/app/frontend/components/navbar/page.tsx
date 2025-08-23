@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';   
 import {
     Trophy,
     Menu,
@@ -15,6 +16,7 @@ import {
     Zap,
     User
 } from 'lucide-react';
+import { Navigate } from 'react-router-dom';
 
 interface NavbarProps {
     className?: string;
@@ -44,19 +46,27 @@ const HabitQuestNavbar: React.FC<NavbarProps> = ({ className = '' }) => {
     };
 
     const navItems = [
-        { name: 'Home', href: '#home', icon: Home },
+        { name: 'Home', href: '/', icon: Home },
         {
             name: 'Features',
             href: '#features',
             icon: Target,
             dropdown: [
-                { name: 'Habit Tracking', href: '#tracking', icon: Target },
-                { name: 'Gamification', href: '#gamification', icon: Star },
+                { name: 'Habit Tracking', href: '/frontend/tools/smart-habit', icon: Target },
+                { name: 'Gamification', href: '/frontend/tools/Gamified-Avatar', icon: Star },
                 { name: 'Social Features', href: '#social', icon: Users },
                 { name: 'Challenges', href: '#challenges', icon: Zap },
             ]
         },
-        { name: 'Community', href: '#community', icon: Users },
+        {
+            name: 'Community', href: '#community', icon: Users,
+            dropdown: [
+                { name: 'Discord', href: '#tracking', icon: Target },
+                { name: 'Github', href: '#gamification', icon: Star },
+                { name: 'Instagram Features', href: '#social', icon: Users },
+                { name: 'Telegram', href: '#challenges', icon: Zap },
+            ]
+        },
         { name: 'Leaderboards', href: '#leaderboards', icon: Award },
         { name: 'Support', href: '#support', icon: MessageCircle },
     ];
@@ -72,7 +82,7 @@ const HabitQuestNavbar: React.FC<NavbarProps> = ({ className = '' }) => {
                             <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                                 <Trophy className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                             </div>
-                            
+
                         </div>
                         <div className="flex flex-col">
                             <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -88,7 +98,15 @@ const HabitQuestNavbar: React.FC<NavbarProps> = ({ className = '' }) => {
                             <div key={item.name} className="relative">
                                 <button
                                     className="flex items-center space-x-2 px-4 py-2 rounded-lg text-white hover:bg-white/10 transition-all duration-200 group"
-                                    onClick={() => item.dropdown && toggleDropdown(item.name)}
+                                    onClick={() => {
+                                        if (item.dropdown) {
+                                            toggleDropdown(item.name);
+                                        }
+                                        else {
+                                            // Navigate to the link if no dropdown
+                                            window.location.href = item.href;
+                                        }
+                                    }}
                                     onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
                                     onMouseLeave={() => !isMenuOpen && setActiveDropdown(null)}
                                 >
@@ -141,9 +159,11 @@ const HabitQuestNavbar: React.FC<NavbarProps> = ({ className = '' }) => {
                         </div> */}
 
                         {/* Action Buttons */}
+                          <Link href="/signup" passHref>
                         <button className="px-4 py-2 text-white border border-white/20 rounded-full hover:bg-white/10 transition-all duration-200 font-medium">
-                            Sign In
+                            Sign Up
                         </button>
+                        </Link>
                         <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2 rounded-full font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105">
                             Start Quest
                         </button>
@@ -212,9 +232,9 @@ const HabitQuestNavbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
                         {/* Mobile Action Buttons */}
                         <div className="px-4 py-4 space-y-3 border-t border-white/10 mt-4">
-                            <button className="w-full py-3 text-white border border-white/20 rounded-full hover:bg-white/10 transition-all duration-200 font-medium">
-                                Sign In
-                            </button>
+                                <button className="w-full py-3 text-white border border-white/20 rounded-full hover:bg-white/10 transition-all duration-200 font-medium">
+                                    Sign Up
+                                </button>                          
                             <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 py-3 rounded-full font-semibold text-white">
                                 Start Your Quest
                             </button>
