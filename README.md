@@ -1,37 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+HabitQuest 🚀
 
-## Getting Started
+Level up your life by building better habits
 
-First, run the development server:
+HabitQuest transforms your daily routine into an epic adventure. Track progress, earn XP, unlock achievements, and compete with friends in a gamified way to stay consistent with your goals.
+✨ Features
 
-```bash
+1.Smart Habit Tracking → Create daily, weekly, or monthly goals with reminders and streak counters.
+
+2.Gamified Avatar System → Earn XP, unlock outfits, and level up your character while completing habits.
+
+3.Social Leaderboards → Compete with friends, join groups, and climb real-time rankings.
+
+4.Achievements & Rewards → Stay motivated with streaks, coins, and unlockable rewards.
+
+5.Clean UI → Dark theme with smooth animations and intuitive design.
+
+📸 Screenshots
+<img width="1237" height="656" alt="Screenshot 2025-08-23 at 4 25 58 PM" src="https://github.com/user-attachments/assets/02041600-a96a-4ea6-8c5d-0c1dee81d428" />
+<img width="1229" height="629" alt="Screenshot 2025-08-23 at 4 24 55 PM" src="https://github.com/user-attachments/assets/b709d4bb-4ad9-4771-b91c-1147f44f6f0f" />
+<img width="1229" height="629" alt="Screenshot 2025-08-23 at 4 24 29 PM" src="https://github.com/user-attachments/assets/c26e896d-b6c3-47b7-a7a2-d5f53134e611" />
+
+🛠️ Tech Stack
+
+Frontend: 
+Next.js, React, TailwindCSS
+State Management: React Hooks / Context
+Icons & UI: Lucide-react, shadcn/ui
+
+1.Clone the repository
+git clone https://github.com/Kuldeep8410/habitizer.git
+cd habitizer
+
+2. Install dependencies
+npm install
+# or
+yarn install
+
+3. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📌 Roadmap
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ Add habit reminders & notifications
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ Expand avatar customization
 
-## Learn More
+ Social groups & challenges
 
-To learn more about Next.js, take a look at the following resources:
+ Mobile-friendly PWA
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Pull requests are welcome!
+If you have ideas for new features, feel free to open an issue.
 
-## Deploy on Vercel
+📜 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# habitizer
+
+
+
+
