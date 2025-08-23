@@ -47,15 +47,15 @@ npm run dev
 
 📌 Roadmap
 
- Add habit reminders & notifications
+ 1.Add habit reminders & notifications
 
- Expand avatar customization
+ 2.Expand avatar customization
 
- Social groups & challenges
+ 3.Social groups & challenges
 
- Mobile-friendly PWA
+ 4.Mobile-friendly PWA
 
-🤝 Contributing
+🤝 Contributings
 
 Pull requests are welcome!
 If you have ideas for new features, feel free to open an issue.
